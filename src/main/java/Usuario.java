@@ -1,7 +1,19 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class Usuario {
     String nombre;
     String password;
     Integer id;
+     List<Producto> listProducto;
+
+    public void setListProducto(List<Producto> listProducto) {
+        this.listProducto = listProducto;
+    }
+
+    public List<Producto> getListProducto() {
+        return listProducto;
+    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;

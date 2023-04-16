@@ -1,11 +1,15 @@
+
+
+
 public class Producto {
-    String nombre;
-    Double precio;
-    Integer id;
+    private String nombre;
+   private Double precio;
+    private Integer id;
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    public Producto(){}
 
     public void setPrecio(Double precio) {
         this.precio = precio;
