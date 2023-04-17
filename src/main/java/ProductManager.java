@@ -1,6 +1,5 @@
 import java.util.List;
 
-
 public interface ProductManager {
     public List<Producto> productsByPrice();
     public List<Producto> productsBySales();

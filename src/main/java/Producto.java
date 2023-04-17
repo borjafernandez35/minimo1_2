@@ -3,8 +3,8 @@
 
 public class Producto {
     private String nombre;
-   private Double precio;
-    private Integer id;
+   private double precio;
+    private int id;
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -23,15 +23,15 @@ public class Producto {
         return nombre;
     }
 
-    public Double getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public Producto(String nombre, Double precio, Integer id) {
+    public Producto(String nombre, double precio, int id) {
         this.nombre = nombre;
         this.precio = precio;
         this.id = id;
