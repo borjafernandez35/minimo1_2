@@ -7,6 +7,10 @@ public class ProductManagerImp implements ProductManager{
 
 
     List<Producto> productoList;
+
+
+
+
     Queue<Order> peticiones;
 
     public ProductManagerImp() {
@@ -15,18 +19,22 @@ public class ProductManagerImp implements ProductManager{
         this.productoList.add(new Producto("donuts",2,2));
         this.productoList.add(new Producto("hielo",0.25,3));
 
+
+
         this.peticiones=new LinkedList<>();
 
     }
 
     @Override
     public List<Producto> productsByPrice() {
-        return productoList;
+        List<Producto> list= productoList;
+        list.sort(list.sort((p1,p2)-> Double.compare(p1.getPrecio(), p2.getPrecio())));
+        return list;
     }
 
     @Override
     public List<Producto> productsBySales() {
-        return null;
+        return productoList;
     }
 
     @Override
@@ -37,6 +45,7 @@ public class ProductManagerImp implements ProductManager{
 
     @Override
     public Order processOrder() {
+
         return null;
     }
 
