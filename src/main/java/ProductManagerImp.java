@@ -1,3 +1,5 @@
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -12,6 +14,8 @@ public class ProductManagerImp implements ProductManager{
 
 
     Queue<Order> peticiones;
+
+//    final static Logger logger = Logger.getLogger(ProductManagerImpl.class);
 
     public ProductManagerImp() {
         this.productoList = new ArrayList<>();
@@ -45,6 +49,16 @@ public class ProductManagerImp implements ProductManager{
 
     @Override
     public Order processOrder() {
+        /*Order t = this.getProducto(id);
+        if (t==null) {
+            logger.warn("not found " + t);
+        }
+        else{
+        addOrder(t);
+        logger.info(t+" deleted ");
+        }
+
+        this.productoList.remove(t);*/
 
         return null;
     }
@@ -65,7 +79,20 @@ public class ProductManagerImp implements ProductManager{
     }
 
     @Override
-    public Producto getProducto(Integer id) {
+    public Producto getProducto(int id) {
+
+       /* logger.info("getProducto("+id+")");
+
+        for (Producto t: this.productoList) {
+            if (t.getId().equals(id)) {
+                logger.info("getProducto("+id+"): "+t);
+
+                return t;
+            }
+        }
+
+        logger.warn("not found " + id);*/
+
         return null;
     }
 
