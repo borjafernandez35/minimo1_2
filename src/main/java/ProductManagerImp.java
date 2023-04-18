@@ -1,9 +1,7 @@
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.awt.geom.RoundRectangle2D;
+import java.util.*;
 
 public class ProductManagerImp implements ProductManager{
 
@@ -19,9 +17,9 @@ public class ProductManagerImp implements ProductManager{
 
     public ProductManagerImp() {
         this.productoList = new ArrayList<>();
-        this.productoList.add(new Producto("cafe",1.5,1));
-        this.productoList.add(new Producto("donuts",2,2));
-        this.productoList.add(new Producto("hielo",0.25,3));
+        this.productoList.add(new Producto("cafe",1.5,1,4));
+        this.productoList.add(new Producto("donuts",2,2,5));
+        this.productoList.add(new Producto("hielo",0.25,3,10));
 
 
 
@@ -32,13 +30,17 @@ public class ProductManagerImp implements ProductManager{
     @Override
     public List<Producto> productsByPrice() {
         List<Producto> list= productoList;
-        list.sort(list.sort((p1,p2)-> Double.compare(p1.getPrecio(), p2.getPrecio())));
+        list.sort((p1,p2)-> Double.compare(p1.getPrecio(), p2.getPrecio()));
         return list;
     }
 
     @Override
     public List<Producto> productsBySales() {
-        return productoList;
+
+        List<Producto> list= productoList;
+        list.sort(Comparator.comparingInt(Producto::getVentas));
+        return list;
+
     }
 
     @Override
@@ -63,18 +65,21 @@ public class ProductManagerImp implements ProductManager{
         return null;
     }
 
+
     @Override
     public List<Order> ordersByUsuario(Integer id) {
         return null;
     }
 
+
     @Override
-    public void addUsuario(String nombre, String password, Integer id) {
+    public void addUsuario(String nombre, String password, int id) {
 
     }
 
+
     @Override
-    public void addProducto(Integer id, String name, double price) {
+    public void addProducto(int id, String name, double price) {
 
     }
 

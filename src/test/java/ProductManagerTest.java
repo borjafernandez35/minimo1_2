@@ -16,6 +16,15 @@ public class ProductManagerTest {
        }
 
     }
+    public void listBySaleTest(){
+
+        init();
+        List<Producto> listaDeProductos = pm.productsBySales();
+
+        for (Producto p:listaDeProductos){
+            System.out.println(p.getNombre()+p.getPrecio()+p.getVentas());
+        }
+    }
 
     public void crearPedidoTest() {
        Order miPeticion=new Order("Borja");
@@ -28,6 +37,7 @@ public class ProductManagerTest {
     public static void main(String[] args) {
         ProductManagerTest productManagerTest=new ProductManagerTest();
         productManagerTest.listByPriceTest();
+        productManagerTest.listBySaleTest();
     }
 
 }

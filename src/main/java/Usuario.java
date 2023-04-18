@@ -2,9 +2,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Usuario {
-    String nombre;
-    String password;
-    Integer id;
+    private String nombre;
+    private String password;
+   private int id;
      List<Producto> listProducto;
 
     public void setListProducto(List<Producto> listProducto) {
@@ -23,7 +23,7 @@ public class Usuario {
         this.password = password;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -35,11 +35,11 @@ public class Usuario {
         return password;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public Usuario(String nombre, String password, Integer id) {
+    public Usuario(String nombre, String password, int id) {
         this.nombre = nombre;
         this.password = password;
         this.id = id;

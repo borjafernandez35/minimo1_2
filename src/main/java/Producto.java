@@ -6,6 +6,8 @@ public class Producto {
    private double precio;
     private int id;
 
+    private int ventas;
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -15,7 +17,7 @@ public class Producto {
         this.precio = precio;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,9 +33,18 @@ public class Producto {
         return id;
     }
 
-    public Producto(String nombre, double precio, int id) {
+    public int getVentas() {
+        return ventas;
+    }
+
+    public void setVentas(int ventas) {
+        this.ventas = ventas;
+    }
+
+    public Producto(String nombre, double precio, int id, int ventas) {
         this.nombre = nombre;
         this.precio = precio;
         this.id = id;
+        this.ventas=ventas;
     }
 }
