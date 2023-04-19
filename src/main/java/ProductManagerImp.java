@@ -79,7 +79,7 @@ public class ProductManagerImp implements ProductManager{
 
 
     @Override
-    public void addProducto(int id, String name, double price) {
+    public void addProducto(int id, String name, double price, int sales) {
 
     }
 
